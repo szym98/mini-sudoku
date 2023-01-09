@@ -6,24 +6,25 @@
 
 
 #puzzle{
-    width:500px;
-    height:500px;
+    width:510px;
+    height:510px;
     position:relative;
     text-align:center;
     flex-wrap: wrap;
     align-items: center;
 
+
 }
 
 
 #puzzle input{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     text-align: center;
     font-size: 30px;
     padding: 0;
     border: 3px solid ;
-    color:lightblue;
+    color:darkslategrey;
 
 }
 
