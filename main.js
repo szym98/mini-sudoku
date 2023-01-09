@@ -223,7 +223,7 @@ class gameGrid {
             }
         }
 
-        var fill = (i, j, arr) => {
+        let fill = (i, j, arr) => {
             if (i === 9 && j === 8) return true;
             if (i === 9) {
                 j++;
