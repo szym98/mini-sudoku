@@ -260,10 +260,10 @@ class gameGrid {
         }
 
         if (fill(0, 0, arr)) {
-            this.setAlert("Solved");
+            this.setAlert("Good job");
             this.loadSudoku();
         } else {
-            this.setAlert("No Solution");
+            this.setAlert(":(");
         }
     }
 }
