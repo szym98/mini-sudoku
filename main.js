@@ -62,8 +62,7 @@ class gameGrid {
                     ((i % 9 === 6 || i % 9 === 7 || i % 9 === 8) && i > 53)
                 )
 
-                )
-            }
+                ) }
 
             this.grid.push(gridRow);
             gameFrame.append(row);
