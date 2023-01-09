@@ -9,7 +9,7 @@ for (let i = 0; i < area; i++) {
     inputElement.setAttribute('max', '9')
     inputElement.setAttribute('min', '0')
     inputElement.setAttribute('type', 'number')
-
+//
     { if (
         ((i % 9 === 0 || i % 9 === 1 || i % 9 === 2) && i < 21) ||
         ((i % 9 === 6 || i % 9 === 7 || i % 9 === 8) && i < 27) ||
