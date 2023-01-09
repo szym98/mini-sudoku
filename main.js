@@ -18,7 +18,7 @@ class gameGrid {
     }
 
     setVisualizerAlert(txt) {
-        if (this.delay > 400) this.setAlert(txt);
+        if (this.delay > 500) this.setAlert(txt);
     }
 
     setAlert(txt) {
