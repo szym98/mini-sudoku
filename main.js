@@ -20,3 +20,26 @@ for (let i = 0; i < area; i++) {
         inputElement.classList.add('odd')
     }
     puzzleBoard.appendChild(inputElement)}
+    const wellWorth= () => {
+        const inputs = document.querySelectorAll('input')
+        inputs.forEach(input => {
+            if (input.value) {
+                submission.push(input.value)
+            } else {
+                submission.push('.')
+            }
+        })
+        console.log(submission.join(''))
+    }
+
+    const populateValues = (solve,solution ) => {
+        const inputs = document.querySelectorAll('input')
+        if (solution && solve) {
+            inputs.forEach((input, i) => {
+                input.value = solution[i]
+            })
+            explainerDisplay.innerHTML = 'Good'
+        } else {
+            explainerDisplay.innerHTML = ':('
+        }
+    }
