@@ -16,6 +16,6 @@ for (let i = 0; i < area; i++) {
         ((i % 9 === 0 || i % 9 === 1 || i % 9 === 2) && i > 53) ||
         ((i % 9 === 6 || i % 9 === 7 || i % 9 === 8) && i > 53)
     )
-        inputElement.classList.add('oddSection')
+        inputElement.classList.add('odd')
     }
     puzzleBoard.appendChild(inputElement)}
