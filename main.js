@@ -232,10 +232,10 @@ function endGame()
     // Display win or Loss message
     if(lives === 0 || timeRemaining === 0 )
     {
-        id("lives").textContent = "You Lost!";
+        id("lives").textContent = "Game over!";
     }
     else{
-        id("lives").textContent = "You Win!";
+        id("lives").textContent = "Good job!";
     }
 }
 
