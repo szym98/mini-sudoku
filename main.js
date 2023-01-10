@@ -10,19 +10,18 @@ const hard = [
     "-1-5-------97-42----5----7-5---3---7-6--2-41---8--5---1-4------2-3-----9-7----8--",
     "712583694639714258845269173521436987367928415498175326184697532253841769976352841",
 ];
+let selectedNum;
+let lives;
 let timer;
 let timeRemaining;
-let lives;
-let selectedNum;
 let selectedTile;
 let disableSelect;
 
 window.onload = function () {
-    // Run the startGame function when button is clicked
+    // Run the start Game function when button is clicked
 
     id("start-btn").addEventListener("click", sGame);
 
-    // add event listener to each number in number container
     for (let i = 0; i < id('number-container').children.length; i++) {
         id("number-container").children[i].addEventListener("click", function () {
             if (!disableSelect) {
@@ -56,9 +55,9 @@ function sGame() {
     else board = hard[0];
 
     //set lives = 3 and enable selecting numbers and tiles
-    lives = 3;
+    lives = 2;
     disableSelect = false;
-    id("lives").textContent = "Lives remaining :3";
+    id("lives").textContent = "Lives remaining :2";
 
     // creates board based on difficulty
     generateBoard(board);
@@ -119,7 +118,7 @@ function generateBoard(board) {
             //Add click event listener to tile
             tile.addEventListener("click",function()
             {
-                //if selection is not disabled(means u can select)
+
                 if(!disableSelect)
                 {
                     //if the tile is already selected
@@ -165,7 +164,7 @@ function generateBoard(board) {
 function updateMove() {
     // if a tile and a number is selected
     if (selectedTile && selectedNum) {
-        // set the tile to the correct number
+
         selectedTile.textContent = selectedNum.textContent;
         // if the number matches the corresponding number in the solution key
         if (checkCorrect(selectedTile)) {
