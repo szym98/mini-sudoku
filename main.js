@@ -20,12 +20,11 @@ let disableSelect;
 window.onload = function () {
     // Run the startGame function when button is clicked
 
-    id("start-btn").addEventListener("click", startGame);
+    id("start-btn").addEventListener("click", sGame);
 
     // add event listener to each number in number container
     for (let i = 0; i < id('number-container').children.length; i++) {
         id("number-container").children[i].addEventListener("click", function () {
-            // if selecting is not disabled
             if (!disableSelect) {
                 // if number is already selected
                 if (this.classList.contains("selected")) {
@@ -49,7 +48,7 @@ window.onload = function () {
     }
 }
 
-function startGame() {
+function sGame() {
     //choose difficulty level
     let board;
     if (id("diff-1").checked) board = easy[0];
