@@ -91,7 +91,7 @@ function startTimer() {
     }, 1000);
 }
 
-//Convert seconds into string of MM:SS format
+//Convert seconds into string of MM:SS format //usunąłeś 10 if second
 function timeConversion(time) {
     let minutes = Math.floor(time / 60);
     if (minutes < 10) minutes = "0" + minutes;
