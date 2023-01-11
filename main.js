@@ -18,9 +18,8 @@ let selectedTile;
 let disableSelect;
 
 window.onload = function () {
-    // Run the start Game function when button is clicked
 
-    id("start-btn").addEventListener("click", sGame);
+    id("start-btn").addEventListener("click",initiateGame);
 
     for (let i = 0; i < id('number-container').children.length; i++) {
         id("number-container").children[i].addEventListener("click", function () {
@@ -47,7 +46,7 @@ window.onload = function () {
     }
 }
 
-function sGame() {
+function initiateGame() {
     let board = id("diff-1").checked ? easy[0] : (id("diff-2").checked ? medium[0] : hard[0]);
 
     //set lives = 2 and enable selecting numbers and tiles
@@ -103,7 +102,9 @@ function generateBoard(board) {
     // let used to increment tile ids
     let idCount = 0;
     //Create 81 tiles
-    for (let i = 0; i < 81; i++) {
+    let MAX_SUDOKU_BOARD_INDEX = 81;
+
+    for (let i = 0; i <MAX_SUDOKU_BOARD_INDEX; i++) {
         //Create a new paragraph element
         let tile = document.createElement("p");
         //if the tile is not empty
@@ -126,7 +127,7 @@ function generateBoard(board) {
                     }
                     else{
                         // deselect all other tiles
-                        for(let i=0 ; i < 81 ; i++)
+                        for(let i=0 ; i < MAX_SUDOKU_BOARD_INDEX ; i++)
                         {
                             qsa(".tile")[i].classList.remove("selected");
                         }
@@ -191,8 +192,6 @@ function updateMove() {
                     endGame();
                 }
                 else {
-                    // if lives is not equal to zero
-                    // update lives text
                     id("lives").textContent = "Lives Remaining : " + lives;
                     // Renable selecting numbers and tiles
                     disableSelect = false;

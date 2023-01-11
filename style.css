@@ -38,6 +38,9 @@ p#timer , p#lives
     font-size:25px;
     font-weight:bold;
     text-align:center;
+
+
+
 }
 #game
 {
@@ -54,6 +57,10 @@ p#timer , p#lives
     margin-top:5px;
     margin-bottom: 5px;
     text-align:center;
+}
+.container {
+    display: flex;
+    flex-direction: row
 }
 #board
 {
@@ -94,5 +101,14 @@ p.incorrect
 .bottomBorder
 {
     border-bottom:4px solid black;
+
+}
+#start-btn{
+
+    border: 1px  solid deepskyblue;
+    box-sizing: border-box;
+    border-spacing: 0;
+    color: blue;
+
 
 }
