@@ -48,13 +48,9 @@ window.onload = function () {
 }
 
 function sGame() {
-    //choose difficulty level
-    let board;
-    if (id("diff-1").checked) board = easy[0];
-    else if (id("diff-2").checked) board = medium[0];
-    else board = hard[0];
+    let board = id("diff-1").checked ? easy[0] : (id("diff-2").checked ? medium[0] : hard[0]);
 
-    //set lives = 3 and enable selecting numbers and tiles
+    //set lives = 2 and enable selecting numbers and tiles
     lives = 2;
     disableSelect = false;
     id("lives").textContent = "Lives remaining :2";
