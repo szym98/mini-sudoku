@@ -1,2 +1,2 @@
 
-Select numbers and place them on the tile
+Select numbers and place them on the tile.
